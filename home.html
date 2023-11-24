@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Agrega la etiqueta de Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPPD004ZD9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-GPPD004ZD9');
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /*background-color: #001f3f;  Fondo azul marino */
+            color: #ffeb3b; /* Texto amarillo */
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item {
+            flex: 0 0 30%; /* Ancho de cada columna (ajustar según sea necesario) */
+            margin: 10px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%; /* La imagen no será más ancha que el contenedor */
+            height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+            display: block; /* Elimina el espacio adicional debajo de la imagen */
+            border: 2px solid #004080; /* Borde azul */
+            border-radius: 8px; /* Esquinas redondeadas */
+            margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+        }
+
+        .texto {
+            background-color: #004080; /* Fondo azul */
+            color: #FFFF00; /* Texto amarillo */
+            text-decoration: none;
+            display: block;
+            padding: 8px; /* Espaciado interno */
+            border-radius: 8px; /* Esquinas redondeadas */
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <!-- Contenido de la página va aquí -->
+        <div class="item">
+            <img src="../imagenes/arcoT.png" alt="Descripción de la imagen">
+            <a class="texto">Paris</a>
+        </div>
+        
+        <div class="item">
+            <img src="../imagenes/puerta.jpeg" alt="Descripción de la imagen">
+            <a class="texto">Alemania</a>
+        </div>
+        
+        <div class="item">
+            <img src="../imagenes/plaz.png" alt="Descripción de la imagen">
+            <a class="texto">Rusia</a>
+        </div>
+    </section>
+
+</body>
+</html>
+
+
+
+

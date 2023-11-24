@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPPD004ZD9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GPPD004ZD9');
+    </script>
+    <title>reseñastour</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001f3f; /* Fondo azul marino */
+            color: #ffeb3b; /* Texto amarillo */
+        }
+
+        header {
+            background-color: #001f3f; /* Fondo azul marino */
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #004080; /* Fondo azul */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffeb3b; /* Texto amarillo */
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body background="imagenes\fon.jpg">
+
+    <header>
+        <h1>Momentos Increibles Y Lugares Inesperados</h1>
+    </header>
+
+    <nav>
+        <a onclick="cargarPagina('paginas/home.html')">Home</a>
+        <a onclick="cargarPagina('paginas/loginprueba.html')">Iniciar Sesión</a>
+        <a onclick="cargarPagina('paginas/resenas.html')">Reseñas</a>
+        <a onclick="cargarPagina('paginas/comentarios.html')">Comentarios</a>
+        <a onclick="cargarPagina('paginas/historia.html')">Historia</a>
+        <a onclick="cargarPagina('paginas/contacto.html')">Contacto</a>
+    </nav>
+
+    <section>
+        <iframe id="iframe" src="paginas/home.html" frameborder="0"></iframe>
+    </section>
+
+    <script>
+        function cargarPagina(pagina) {
+            document.getElementById('iframe').src = pagina;
+        }
+    </script>
+
+</body>
+</html>

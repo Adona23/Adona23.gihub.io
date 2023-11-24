@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPPD004ZD9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GPPD004ZD9');
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #001f3f; /* Fondo azul marino */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        form {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco transparente */
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff; /* Texto blanco */
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical; /* Permite ajustar la altura verticalmente */
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #comentarios {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .comentario {
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco transparente */
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var commentForm = document.getElementById('commentForm');
+            var comentariosDiv = document.getElementById('comentarios');
+
+            commentForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Evita que el formulario se envíe
+
+                var comentario = document.getElementById('comentario').value;
+
+                if (comentario.trim() !== "") {
+                    var comentarioDiv = document.createElement('div');
+                    comentarioDiv.className = 'comentario';
+                    comentarioDiv.textContent = comentario;
+
+                    comentariosDiv.appendChild(comentarioDiv);
+
+                    // Limpia el área de comentarios después de publicar
+                    document.getElementById('comentario').value = "";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <h1>Tus comentarios nos ayudan a crecer más</h1>
+    
+    <form action="#" method="post" id="commentForm">
+        <label for="comentario">Comentario:</label><br>
+        <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Publicar comentario">
+    </form>
+
+    <div id="comentarios">
+        <!-- Los comentarios se mostrarán aquí -->
+    </div>
+
+</body>
+</html>

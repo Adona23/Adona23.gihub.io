@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPPD004ZD9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-GPPD004ZD9');
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+           /* background-color: #f4f4f4;*/
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            /* Elimina el fondo blanco */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333; /* Color de texto principal */
+        }
+
+        h1 {
+            text-align: center;
+            color: #FF6347; /* Color rojo claro */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            background-color: #FF6347; /* Fondo de etiquetas */
+            padding: 4px; /* Espaciado interno */
+            border-radius: 4px; /* Bordes redondeados */
+            color: #fff; /* Texto blanco */
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('reseñaForm');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Evita que el formulario se envíe
+
+                // Aquí puedes agregar tu lógica para manejar el envío del formulario
+                alert('Reseña enviada con éxito');
+            });
+        });
+    </script>
+</head>
+<body background="imagenes\reseñas.png">
+
+    <form action="#" method="post" id="reseñaForm">
+        <h1>Publica tu Reseña</h1>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="lugar">Lugar Turístico:</label>
+        <input type="text" id="lugar" name="lugar" required>
+
+        <label for="resena">Reseña:</label>
+        <textarea id="resena" name="resena" rows="4" cols="50" required></textarea>
+
+        <input type="submit" value="Publicar reseña">
+    </form>
+
+</body>
+</html>
